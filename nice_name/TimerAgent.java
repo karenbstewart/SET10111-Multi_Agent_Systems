@@ -29,9 +29,9 @@ public class TimerAgent extends Agent{
 		//Create a new TickerBehaviour
 		addBehaviour(new TickerBehaviour(this, 1000) {
 			
-			//call onTick every 1000ms
+			//call onTick every 1000ms (1 second)
 			protected void onTick() {
-				// Count down
+				// Count down w = 15 therefore it last 15 seconds
 				if (w > 0) 
 				{
 					System.out.println(w + " seconds left.");;

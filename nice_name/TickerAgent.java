@@ -12,7 +12,7 @@ public class TickerAgent extends Agent{
 	Behaviour loop;
 	protected void setup() 
 	{
-		loop = new TickerBehaviour(this, 300) {			
+		loop = new TickerBehaviour(this, 1000) {			
 			
 			protected void onTick() {
 				// Print elapsed time since launch

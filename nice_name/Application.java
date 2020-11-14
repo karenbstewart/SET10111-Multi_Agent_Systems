@@ -35,13 +35,21 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent DonnieD: " + e.toString());
 		}
- */	
+	
 	try {
 		//Now start our own TickerAgent, called Flash
 		AgentController myTickerAgent = myContainer.createNewAgent("Flash", TickerAgent.class.getCanonicalName(), null);
 		myTickerAgent.start();
 		}catch(Exception e) {
 			System.out.println("Exception starting agent Flash: " + e.toString());
+		}
+ */	
+	try {
+		//Now start our own TickerAgent, called B1B2
+		AgentController myDemoAgent = myContainer.createNewAgent("B1B2", DemoAgent.class.getCanonicalName(), null);
+		myDemoAgent.start();
+		}catch(Exception e) {
+			System.out.println("Exception starting agent B1B2: " + e.toString());
 		}
 
 	}			
