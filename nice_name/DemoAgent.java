@@ -8,9 +8,6 @@ public class DemoAgent extends Agent {
 	protected void setup() {
 		addBehaviour(new B1(this));
 		addBehaviour(new B2(this));
-				
+		addBehaviour(new ThreeStepBehaviour(this));		
 	}
-	
-
-
 }

@@ -11,7 +11,7 @@ public class B2 extends Behaviour {
 	
 	@Override
 	public void action() {
-		System.out.println(timesCalled);
+		System.out.println(timesCalled + " Behaviour2 ");
 		timesCalled++;
 
 	}

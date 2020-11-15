@@ -27,8 +27,8 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent Fred: " + e.toString());
 		}
-	
-/*	try {
+/*	
+	try {
 		//Now start our own TimerAgent, called DonnieD
 		AgentController myTimerAgent = myContainer.createNewAgent("DonnieD", TimerAgent.class.getCanonicalName(), null);
 		myTimerAgent.start();
@@ -43,7 +43,7 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent Flash: " + e.toString());
 		}
- */	
+*/	 
 	try {
 		//Now start our own TickerAgent, called B1B2
 		AgentController myDemoAgent = myContainer.createNewAgent("B1B2", DemoAgent.class.getCanonicalName(), null);
@@ -51,7 +51,9 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent B1B2: " + e.toString());
 		}
+/*	
 
+*/
 	}			
 }	
 	

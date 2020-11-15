@@ -11,7 +11,7 @@ public class B1 extends Behaviour {
 
 	@Override
 	public void action() {
-		System.out.println(myAgent.getLocalName());
+		System.out.println(myAgent.getLocalName() + " Behaviour1 ");
 		timesCalled++;
 	}
 
