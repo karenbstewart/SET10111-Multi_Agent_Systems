@@ -8,6 +8,7 @@ public class DemoAgent extends Agent {
 	protected void setup() {
 		addBehaviour(new B1(this));
 		addBehaviour(new B2(this));
+		// Behaviour 3 cycles forever
 		addBehaviour(new ThreeStepBehaviour(this));		
 	}
 }

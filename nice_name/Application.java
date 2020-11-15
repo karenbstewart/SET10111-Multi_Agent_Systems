@@ -43,13 +43,22 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent Flash: " + e.toString());
 		}
-*/	 
+ 
 	try {
-		//Now start our own TickerAgent, called B1B2
+		//Now start our own DemoAgent executing 3 behaviour types, called B1B2
 		AgentController myDemoAgent = myContainer.createNewAgent("B1B2", DemoAgent.class.getCanonicalName(), null);
 		myDemoAgent.start();
 		}catch(Exception e) {
 			System.out.println("Exception starting agent B1B2: " + e.toString());
+			}
+
+*/
+	try {
+		//Now start our own SequentialAgent, called Sammy
+		AgentController mySequentialAgent = myContainer.createNewAgent("Sammy", SequentialAgent.class.getCanonicalName(), null);
+		mySequentialAgent.start();
+		}catch(Exception e) {
+			System.out.println("Exception starting agent Sammy: " + e.toString());
 		}
 /*	
 

@@ -45,9 +45,17 @@ public class ThreeStepBehaviour extends Behaviour{
 	@Override
 	public int onEnd() {
 		System.out.println("Terminating Behaviour");
+		reset(); // MUST call this method before adding the behaviour again
+		myAgent.addBehaviour(this); // add the behaviour back to the agents behaviour queue
 		return 0;
 	}
-		
+	
+	// reset the behaviours state
+	public void reset() {
+		step = 1;
+		result = 0;
+		finished = false;
+	}
 	
 
 }
