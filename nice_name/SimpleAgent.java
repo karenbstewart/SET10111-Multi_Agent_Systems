@@ -23,7 +23,7 @@ public class SimpleAgent extends Agent {
 			e.printStackTrace();
 		}
 		// Print out a welcome message
-		System.out.println("Hello! Agent " + getAID().getName()+" is ready." + "Extra text" + getAID());
+		System.out.println("Hello! Agent " + getAID().getName()+" is ready." + "Extra text");
 	}
 	protected void takeDown() {
 		// Deregister the agent from the yellow pages with the DF Agent

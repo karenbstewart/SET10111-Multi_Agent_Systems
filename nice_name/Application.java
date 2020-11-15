@@ -52,7 +52,7 @@ public static void main (String[] args) {
 			System.out.println("Exception starting agent B1B2: " + e.toString());
 			}
 
-*/
+
 	try {
 		//Now start our own SequentialAgent, called Sammy
 		AgentController mySequentialAgent = myContainer.createNewAgent("Sammy", SequentialAgent.class.getCanonicalName(), null);
@@ -60,9 +60,28 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent Sammy: " + e.toString());
 		}
-/*	
+*/	
+	
+	try {
+		//Now start our own BookBuyerAgent, called Buyer
+		String[] books = {"Java for dummies"};
+		AgentController myBuyerAgent = myContainer.createNewAgent("Buyer", BookBuyerAgent.class.getCanonicalName(), books);
+		myBuyerAgent.start();
+		}catch(Exception e) {
+			System.out.println("Exception starting agent buyer: " + e.toString());
+		}
+	
 
-*/
+	
+	try {
+		//Now start our own WakerAgent, called WakeyWakey
+		AgentController myWakerAgent = myContainer.createNewAgent("WakeyWakey", WakerAgent.class.getCanonicalName(), null);
+		myWakerAgent.start();
+		}catch(Exception e) {
+			System.out.println("Exception starting agent WakeyWakey: " + e.toString());
+		}
+
+	
 	}			
 }	
 	
