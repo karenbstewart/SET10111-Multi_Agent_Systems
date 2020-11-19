@@ -2,6 +2,7 @@ package nice_name;
 
 import jade.core.AID;
 import jade.core.Agent;
+import jade.core.behaviours.TickerBehaviour;
 
 public class BookBuyerAgent extends Agent {
 	// Title of the book to buy
@@ -21,6 +22,16 @@ public class BookBuyerAgent extends Agent {
 		if(args != null && args.length > 0) {
 			targetBookTitle = (String) args[0];
 			System.out.println("Trying to buy " + targetBookTitle);
+			
+			// TickerBehaviour that schedules a request to seller agents every minute
+			addBehaviour(new TickerBehaviour(this, 60000) {
+				
+				@Override
+				protected void onTick() {
+					myAgent.addBehaviour(new RequestPerformer());
+					
+				}
+			});
 		}
 		else {
 			// Make the agent to terminate immediately
@@ -32,7 +43,7 @@ public class BookBuyerAgent extends Agent {
 	// Put agent clean-up operations here
 	protected void takeDown() {
 		// Printout a dismissal message
-		System.out.println("Buyer-agent " + getAID().getName() + " teminating");
+		System.out.println("Buyer-agent " + getAID().getName() + " terminating");
 	}
 
 }

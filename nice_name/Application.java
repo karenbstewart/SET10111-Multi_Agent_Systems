@@ -60,13 +60,22 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent Sammy: " + e.toString());
 		}
-*/	
+	
 	
 	try {
 		//Now start our own BookBuyerAgent, called Buyer
 		String[] books = {"Java for dummies"};
 		AgentController myBuyerAgent = myContainer.createNewAgent("Buyer", BookBuyerAgent.class.getCanonicalName(), books);
 		myBuyerAgent.start();
+		}catch(Exception e) {
+			System.out.println("Exception starting agent buyer: " + e.toString());
+		}
+*/	
+	try {
+		//Now start our own BookBuyerAgent, called Buyer
+		String[] books = {"Java for dummies"};
+		AgentController myAgent = myContainer.createNewAgent("SellerA", BookSellerAgent.class.getCanonicalName(), null);
+		myAgent.start();
 		}catch(Exception e) {
 			System.out.println("Exception starting agent buyer: " + e.toString());
 		}
