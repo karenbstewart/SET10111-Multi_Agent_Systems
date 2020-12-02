@@ -1,12 +1,11 @@
 package nice_name;
-
+/*
 import jade.core.behaviours.Behaviour;
 import jade.domain.introspection.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 
 private class PurchaseOrderServer extends CyclicBehaviour {
 
-	@Override
 	public void action() {
 		MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.ACCEPT_PROPOSAL);
 		ACLMessage msg = myAgent.receive(mt);
@@ -31,3 +30,4 @@ private class PurchaseOrderServer extends CyclicBehaviour {
 		}
 	}
 }// End of inner clas OfferRequestsServer
+*/

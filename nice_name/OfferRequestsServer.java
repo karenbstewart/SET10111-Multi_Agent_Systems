@@ -1,5 +1,5 @@
 package nice_name;
-
+/*
 import jade.core.behaviours.Behaviour;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.domain.introspection.ACLMessage;
@@ -7,11 +7,7 @@ import jade.domain.introspection.ACLMessage;
 
 private class OfferRequestsServer extends CyclicBehaviour {
 
-	public OfferRequestsServer() {
-		// TODO Auto-generated constructor stub
-	}
 
-	@Override
 	public void action() {
 		ACLMessage msg = myAgent.receive();
 		if(msg != null) {
@@ -34,10 +30,7 @@ private class OfferRequestsServer extends CyclicBehaviour {
 		}
 	} //End of inner class OfferRequestsServer
 
-	@Override
-	public boolean done() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+
 
 }
+*/

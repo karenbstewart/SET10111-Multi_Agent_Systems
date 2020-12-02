@@ -1,5 +1,6 @@
 package nice_name;
 
+import nice_name.BookSellerAgent;
 import jade.core.Profile;
 import jade.core.ProfileImpl;
 import jade.wrapper.AgentController;
@@ -19,7 +20,7 @@ public static void main (String[] args) {
 		//Start the Agent controller, which is itself an agent (rma)
 		AgentController rma = myContainer.createNewAgent("rma", "jade.tools.rma.rma", null);
 		rma.start();
-		
+
 		//Now start our own SimpleAgent, called Fred
 		//telling JADE to make new agent with definition in SimpleAgent with local name Fred
 		AgentController myAgent = myContainer.createNewAgent("Fred", SimpleAgent.class.getCanonicalName(), null);
@@ -28,14 +29,15 @@ public static void main (String[] args) {
 			System.out.println("Exception starting agent Fred: " + e.toString());
 		}
 /*	
+		
+		
 	try {
 		//Now start our own TimerAgent, called DonnieD
 		AgentController myTimerAgent = myContainer.createNewAgent("DonnieD", TimerAgent.class.getCanonicalName(), null);
 		myTimerAgent.start();
 		}catch(Exception e) {
 			System.out.println("Exception starting agent DonnieD: " + e.toString());
-		}
-	
+
 	try {
 		//Now start our own TickerAgent, called Flash
 		AgentController myTickerAgent = myContainer.createNewAgent("Flash", TickerAgent.class.getCanonicalName(), null);
@@ -43,7 +45,7 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent Flash: " + e.toString());
 		}
- 
+
 	try {
 		//Now start our own DemoAgent executing 3 behaviour types, called B1B2
 		AgentController myDemoAgent = myContainer.createNewAgent("B1B2", DemoAgent.class.getCanonicalName(), null);
@@ -60,7 +62,7 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent Sammy: " + e.toString());
 		}
-	
+*/	
 	
 	try {
 		//Now start our own BookBuyerAgent, called Buyer
@@ -70,12 +72,16 @@ public static void main (String[] args) {
 		}catch(Exception e) {
 			System.out.println("Exception starting agent buyer: " + e.toString());
 		}
-*/	
+
 	try {
-		//Now start our own BookBuyerAgent, called Buyer
-		String[] books = {"Java for dummies"};
-		AgentController myAgent = myContainer.createNewAgent("SellerA", BookSellerAgent.class.getCanonicalName(), null);
-		myAgent.start();
+		//Now start our own BookSellerAgent, called SellerA
+		AgentController mySellerAgent = myContainer.createNewAgent("SellerA", BookSellerAgent.class.getCanonicalName(), null);
+		mySellerAgent.start();
+		
+		//Now start our own BookSellerAgent, called SellerA
+		AgentController mySellerBAgent = myContainer.createNewAgent("SellerB", BookSellerAgent.class.getCanonicalName(), null);
+		mySellerBAgent.start();
+		
 		}catch(Exception e) {
 			System.out.println("Exception starting agent buyer: " + e.toString());
 		}
@@ -90,7 +96,7 @@ public static void main (String[] args) {
 			System.out.println("Exception starting agent WakeyWakey: " + e.toString());
 		}
 
-	
-	}			
+	}
+					
 }	
 	

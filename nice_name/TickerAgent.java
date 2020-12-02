@@ -20,7 +20,6 @@ public class TickerAgent extends Agent{
 			}
 		};
 		
-		//Create a new TickerBehaviour
 		addBehaviour(new TickerBehaviour(this, 1000) {
 			
 			//call onTick every 1000ms

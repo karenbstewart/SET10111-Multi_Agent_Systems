@@ -6,6 +6,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import nice_name.BookSellerAgent;
+
 public class BookSellerGui extends JFrame{
 private BookSellerAgent myAgent;
 	
@@ -32,6 +34,7 @@ private BookSellerAgent myAgent;
 				try {
 					String title = titleField.getText().trim();
 					String price = priceField.getText().trim();
+					System.out.println(title + price);
 					myAgent.updateCatalogue(title, Integer.parseInt(price));
 					titleField.setText("");
 					priceField.setText("");
